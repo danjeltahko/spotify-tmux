@@ -1,5 +1,6 @@
 # Spotify Tmux Plugin
 Control Spotify directly from your tmux session. Compatible with macOS.
+![add playlist demo](./assets/demo.gif)
 
 ## Features
 * Control basic Spotify functions like play, pause, next, and previous.
@@ -40,7 +41,7 @@ set -g @spotify-shuffle "s"
 For example, to change the key binding to prefix + <kbd>Shift</kbd> + <kbd>J</kbd>, you'd add:
 
 ```bash
-set -g @spotifybinding "J"
+set -g @spotifyprefix "J"
 ```
 ## Requirements
 * macOS with the Spotify application installed.
