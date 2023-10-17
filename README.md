@@ -14,12 +14,12 @@ Once installed, you can use the key binding to control Spotify. By default, the 
 You can customize the key binding by setting the @spotifybinding option in your tmux.conf:
 
 ```bash
-set -g @spotifybinding "your_preferred_key"
+set -g @spotifyprefix "your_preferred_key"
 ```
 For example, to change the key binding to prefix + <kbd>Shift</kbd> + <kbd>s</kbd>, you'd add:
 
 ```bash
-set -g @spotifybinding "S"
+set -g @spotifyprefix "S"
 ```
 ## Requirements
 * macOS with the Spotify application installed.

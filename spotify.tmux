@@ -2,28 +2,7 @@
 
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PATH="/usr/local/bin:$PATH:/usr/sbin"
-
-
-get_tmux_option() {
-  local option value default
-  option="$1"
-  default="$2"
-  value=$(tmux show-option -gqv "$option")
-
-  if [ -n "$value" ]
-  then
-    if [ "$value" = "null" ]
-    then
-      echo ""
-
-    else
-      echo "$value"
-    fi
-  
-  else 
-    echo "$default"
-  fi
-}
+source "$CURRENT_DIR/scripts/helpers.sh"
 
 set_playlist_keybindings() {
   for i in 1 2 3 4 5 6 7 8 9
