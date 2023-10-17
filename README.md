@@ -31,25 +31,17 @@ Press the Spotify prefix followed by the configured keybinding:
 | a   | Add a playlist             |
 | 1-9 | Play playlists 1 through 9 |
 
-You can customize the key binding by setting the @spotifybinding option in your tmux.conf:
+You can customize the key binding by setting the @spotifyprefix option in your tmux.conf:
 
 ```bash
-<<<<<<< HEAD
-set -g @spotifyprefix "your_preferred_key"
-=======
 set -g @spotify-open "o"
 set -g @spotify-shuffle "s"
 # ... and so on for other commands
->>>>>>> origin/main
 ```
 For example, to change the key binding to prefix + <kbd>Shift</kbd> + <kbd>J</kbd>, you'd add:
 
 ```bash
-<<<<<<< HEAD
-set -g @spotifyprefix "S"
-=======
 set -g @spotifyprefix "J"
->>>>>>> origin/main
 ```
 ## Requirements
 * macOS with the Spotify application installed.
