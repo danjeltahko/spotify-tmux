@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-CURRENT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+CURRENT_DIR=$(cd "$(dirname "$0")" && pwd)
 PLAYLIST_FILE="$CURRENT_DIR/.spotify_playlists"
 
 show_list() {
