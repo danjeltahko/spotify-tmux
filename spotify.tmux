@@ -4,6 +4,41 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PATH="/usr/local/bin:$PATH:/usr/sbin"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
+spotify_interpolation=(
+	"\#{spotify_track}"
+	"\#{spotify_artist}"
+  "\#{spotify_album}"
+  "\#{spotify_state}"
+)
+
+spotify_commands=(
+	"#($CURRENT_DIR/scripts/show_track.sh)"
+	"#($CURRENT_DIR/scripts/show_artist.sh)"
+  "#($CURRENT_DIR/scripts/show_album.sh)"
+  "#($CURRENT_DIR/scripts/show_state.sh)"
+)
+
+set_tmux_option() {
+	local option="$1"
+	local value="$2"
+	tmux set-option -gq "$option" "$value"
+}
+
+do_interpolation() {
+	local all_interpolated="$1"
+	for ((i=0; i<${#spotify_commands[@]}; i++)); do
+		all_interpolated=${all_interpolated//${spotify_interpolation[$i]}/${spotify_commands[$i]}}
+	done
+	echo "$all_interpolated"
+}
+
+update_tmux_option() {
+	local option="$1"
+	local option_value="$(get_tmux_option "$option")"
+	local new_option_value="$(do_interpolation "$option_value")"
+	set_tmux_option "$option" "$new_option_value"
+}
+
 set_playlist_keybindings() {
   for i in 1 2 3 4 5 6 7 8 9
   do 
@@ -36,6 +71,9 @@ main() {
   # Playlist commands
   tmux bind-key -T skt "$playlist_add" run -b "tmux neww 'source $CURRENT_DIR/scripts/playlist.sh && add_playlist'"
   set_playlist_keybindings
+  
+  update_tmux_option "status-right"
+	update_tmux_option "status-left"
 }
 
 main
