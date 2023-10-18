@@ -1,6 +1,6 @@
 tell_spotify() {
   local arg=$1
-  echo $(osascript -e "tell application \"Spotify\" to $arg")
+  osascript -e "tell application \"Spotify\" to $arg"
 }
 
 get_tmux_option() {
