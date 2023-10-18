@@ -4,7 +4,7 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PLAYLIST_FILE="$CURRENT_DIR/.spotify_playlists"
 PATH="/usr/local/bin:$PATH:/usr/sbin"
 
-source "$CURRENT_DIR/scripts/helpers.sh"
+source "$CURRENT_DIR/helpers.sh"
 
 open_spotify() {
   open -a Spotify
