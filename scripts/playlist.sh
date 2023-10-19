@@ -25,7 +25,8 @@ add_playlist() {
   
     if [ ! -z $playlist_id ]
     then
-      echo -n "Playlist name : "
+      local spotify_type=$(echo "$playlist_id" | cut -d ':' -f 1)
+      echo -n "Name of $spotify_type :"
       read playlist_name
 
       show_list
