@@ -75,9 +75,9 @@ set -g status-right "#{spotify_track} | #{spotify_artist} | #{spotify_album} | #
 
 You can also customize the icons that represent each state by setting tmux options in tmux.conf.
 ```bash
-set -g @spotify-shuffle-icon "󰒟"
-set -g @spotify-playing-icon "󰝚"
-set -g @spotify-repeat-icon "󰕇"
+set -g @spotify-shuffle-icon "†"
+set -g @spotify-playing-icon ""
+set -g @spotify-repeat-icon "Ω"
 ```
 
 ## Requirements
