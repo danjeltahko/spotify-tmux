@@ -1,5 +1,7 @@
 # Spotify Tmux Plugin
+
 Control Spotify directly from your tmux session. Compatible with macOS.
+
 ![add playlist demo](./assets/demo.gif)
 
 ## Features
@@ -81,3 +83,4 @@ set -g @spotify-repeat-icon "󰕇"
 ## Requirements
 * macOS with the Spotify application installed.
 * AppleScript support (osascript command available).
+* In order to have the icons displayed correctly please use / update your favorite [nerd font](https://www.nerdfonts.com/font-downloads).
