@@ -12,7 +12,7 @@ show_list() {
 
 get_id() {
   local url=$1
-  local id=$(echo "$url" | sed -n 's|^https://open\.spotify\.com/playlist/\([^?]*\).*|\1|p')
+  local id=$(echo "$url" | sed -n 's|^https://open\.spotify\.com/playlist/\([^?]*\).*|\1|p' | tr '/' ':')
   echo "$id"
 }
 

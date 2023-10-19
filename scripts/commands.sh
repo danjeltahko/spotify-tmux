@@ -24,7 +24,7 @@ play_pause() {
 
 get_url() {
   local id=$1
-  local url=$(grep "^$id" "$PLAYLIST_FILE" | cut -d ':' -f 3)
+  local url=$(grep "^$id" "$PLAYLIST_FILE" | cut -d ':' -f 3-4)
   echo "$url"
 }
 
@@ -33,7 +33,7 @@ play_playlist() {
   local playlist_url=$(get_url "$playlist_id")
   if [[ ! -z $playlist_url ]]
   then
-    tell_spotify "play track \"spotify:playlist:$playlist_url\""
+    tell_spotify "play track \"spotify:$playlist_url\""
   fi
 }
 
