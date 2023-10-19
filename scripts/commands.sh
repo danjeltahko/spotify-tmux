@@ -34,8 +34,6 @@ play_playlist() {
   if [[ ! -z $playlist_url ]]
   then
     tell_spotify "play track \"spotify:playlist:$playlist_url\""
-  else
-    return
   fi
 }
 
