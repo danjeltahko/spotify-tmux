@@ -37,6 +37,7 @@ Press the Spotify prefix followed by the configured keybinding:
 | a   | Add a playlist             |
 | 1-9 | Play playlists 1 through 9 |
 
+> **Caution: When adding a new playlist/album with <kbd>spotifyprefix+a</kbd>, do not use <kbd>:</kbd> in the naming.** *The playlist file separates the ID, name and Spotify link using <kbd>:</kbd>. So using <kbd>:</kbd> in the name will result in playback issues. Instead, please use <kbd>-</kbd> for example.*
 
 ## Configuration
 
