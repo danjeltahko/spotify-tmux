@@ -59,6 +59,7 @@ main() {
   local spotify_prev=$(get_tmux_option "@spotify-prev" "h")
   # Spotify playlists
   local playlist_add=$(get_tmux_option "@spotify-add-playlist" "a")
+  local show_playlists=$(get_tmux_option "@spotify-show-playlists" "?")
   # Spotify key table (skt)
   tmux bind-key -T prefix "$spotify_prefix" switch-client -T skt
   # Regular commands
@@ -70,6 +71,7 @@ main() {
   tmux bind-key -T skt "$spotify_prev" run -b "source $CURRENT_DIR/scripts/commands.sh && prev_track"
   # Playlist commands
   tmux bind-key -T skt "$playlist_add" run -b "tmux neww 'source $CURRENT_DIR/scripts/playlist.sh && add_playlist'"
+  tmux bind-key -T skt "$show_playlists" run -b "tmux neww 'source $CURRENT_DIR/scripts/playlist.sh && show_playlists'"
   set_playlist_keybindings
   
   update_tmux_option "status-right"

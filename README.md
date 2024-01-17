@@ -30,6 +30,7 @@ Press the Spotify prefix followed by the configured keybinding:
 | h   | Previous track             |
 | a   | Add a playlist             |
 | 1-9 | Play playlists 1 through 9 |
+| ?   | Show your saved playlists  |
 
 You can customize the key binding by setting the @spotifyprefix option in your tmux.conf:
 
