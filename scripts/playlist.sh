@@ -56,3 +56,11 @@ add_playlist() {
     fi
   done
 }
+
+show_playlists() {
+  # Show binded playlists and close when any key is pressed
+  show_list
+  echo -n "Press Enter to exit:"
+  read
+  tmux kill-window
+}

@@ -36,6 +36,7 @@ Press the Spotify prefix followed by the configured keybinding:
 | h   | Previous track             |
 | a   | Add a playlist             |
 | 1-9 | Play playlists 1 through 9 |
+| ?   | Show your saved playlists  |
 
 > **Caution: When adding a new playlist/album with <kbd>spotifyprefix+a</kbd>, do not use <kbd>:</kbd> in the naming.** *The playlist file separates the ID, name and Spotify link using <kbd>:</kbd>. So using <kbd>:</kbd> in the name will result in playback issues. Instead, please use <kbd>-</kbd> for example.*
 
@@ -53,6 +54,7 @@ set -g @spotify-playpause "p"
 set -g @spotify-next "l"
 set -g @spotify-prev "h"
 set -g @spotify-add-playlist "a"
+set -g @spotify-show-playlists "?"
 ```
 For example, to change the key binding to prefix + <kbd>Shift</kbd> + <kbd>J</kbd>, you'd add:
 
