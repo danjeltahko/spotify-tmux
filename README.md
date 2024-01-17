@@ -54,6 +54,7 @@ set -g @spotify-playpause "p"
 set -g @spotify-next "l"
 set -g @spotify-prev "h"
 set -g @spotify-add-playlist "a"
+set -g @spotify-show-playlists "?"
 ```
 For example, to change the key binding to prefix + <kbd>Shift</kbd> + <kbd>J</kbd>, you'd add:
 
